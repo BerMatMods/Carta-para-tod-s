@@ -1,54 +1,143 @@
-<header>
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BerMatModZ - Red Social Hack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Share Tech Mono', monospace;
+            overflow: hidden;
+            background-image: url('https://wallpapercave.com/wp/wp4043022.jpg');
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+        h1 {
+            color: #f00;
+            text-align: center;
+            font-size: 3em;
+            margin-top: 20px;
+            text-shadow: 0 0 10px #f00;
+        }
+        .console {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 90%;
+            height: 500px;
+            overflow-y: scroll;
+            box-shadow: 0 0 15px #0f0, 0 0 30px #f00;
+            backdrop-filter: blur(5px);
+        }
+        .line {
+            margin: 5px 0;
+            white-space: nowrap;
+        }
+        .typing {
+            border-right: 2px solid #0f0;
+            display: inline;
+            animation: blink 0.7s steps(1) infinite;
+        }
+        @keyframes blink {
+            0%, 100% { border-color: #0f0; }
+            50% { border-color: transparent; }
+        }
+        .highlight {
+            color: #f00;
+            text-shadow: 0 0 5px #f00;
+        }
+        .alert-box {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111;
+            color: #0f0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px #f00;
+            animation: popup 0.8s ease-in-out infinite alternate;
+            border: 2px solid #f00;
+            backdrop-filter: blur(5px);
+        }
+        @keyframes popup {
+            0% { transform: translate(-50%, -10px); }
+            100% { transform: translate(-50%, 10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>⚡ BerMatModZ - Red Social Hack ⚡</h1>
+    <div class="console" id="console"></div>
+    <div class="alert-box" id="alert-box" style="display: none;">
+        ⚠️ Tu teléfono ha sido inyectado con el antivirus de BerMatModZ ⚠️<br>
+        📱 Protección total activada.<br>
+        🔒 Disfruta de máxima seguridad mientras estés en nuestro servicio.
+    </div>
+    <script>
+        const lines = [
+            'Iniciando conexión segura con la red...',
+            'Estableciendo túneles cifrados...',
+            'Verificando identidad: BerMatModZ...',
+            'Acceso autorizado ✅',
+            'Recopilando información de la víctima...',
+            'Cargando archivos del servidor...',
+            'Comprometiendo cuentas de redes sociales...',
+            'Inyectando códigos maliciosos en los servidores...',
+            'Filtrando datos privados...',
+            'Obteniendo mensajes privados...',
+            'Accediendo a fotografías y videos...',
+            'Simulando rastreo geográfico...',
+            'Acceso total concedido...',
+            '⚠️ Sistema comprometido: Todos los datos han sido clonados.',
+            'El sistema ha sido comprometido por BerMatModZ, uno de los hackers más temidos del mundo, experto en ciberseguridad, inteligencia artificial y tecnología avanzada.',
+            'Control total establecido. Sin rastros. 🕶️',
+            'Sistema seguro cerrado.'
+        ];const consoleElement = document.getElementById('console');
+    let index = 0;
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+    function typeLine(line) {
+        const div = document.createElement('div');
+        div.className = 'line';
+        consoleElement.appendChild(div);
 
-# GitHub Pages
+        let charIndex = 0;
+        function typeChar() {
+            div.textContent += line[charIndex];
+            charIndex++;
+            if (charIndex < line.length) {
+                setTimeout(typeChar, 50);
+            }
+        }
+        typeChar();
+    }
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+    function typeAllLines() {
+        if (index < lines.length) {
+            typeLine(lines[index]);
+            index++;
+            setTimeout(typeAllLines, 1000);
+        } else {
+            const done = document.createElement('div');
+            done.className = 'line typing';
+            done.textContent = 'Sistema seguro cerrado.';
+            consoleElement.appendChild(done);
+            showAlert();
+        }
+    }
 
-</header>
+    function showAlert() {
+        const alertBox = document.getElementById('alert-box');
+        alertBox.style.display = 'block';
+        setTimeout(() => alertBox.style.display = 'none', 5000);
+    }
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+    typeAllLines();
+</script>
 
-## Step 1: Enable GitHub Pages
-
-_Welcome to GitHub Pages and Jekyll :tada:!_
-
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
-
-### :keyboard: Activity: Enable GitHub Pages
-
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+</body>
+</html>
