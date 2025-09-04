@@ -1,5 +1,4 @@
 
-<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -17,7 +16,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #fffaf9;
+      background: linear-gradient(135deg, #f9f6ff, #e9d5ff); /* Fondo suave con tono morado claro */
       color: #555;
       min-height: 100vh;
       display: flex;
@@ -27,6 +26,7 @@
       padding: 20px;
       overflow-x: hidden;
       position: relative;
+      filter: saturate(1.1); /* Ligera saturación */
     }
 
     /* Animación de borde brillante sutil (solo líneas brillantes) */
@@ -252,7 +252,7 @@
       box-shadow: 0 8px 20px rgba(142, 36, 170, 0.4);
     }
 
-    /* Contenedor principal */
+    /* Contenido principal */
     .main-container {
       display: none;
       text-align: center;
@@ -383,7 +383,7 @@
     <div class="close-menu" onclick="toggleMenu()">✕</div>
     <h3>🛠️ Personalización</h3>
     <p>¿Quieres personalizar esta carta, el código de acceso o usar este diseño para tu proyecto?</p>
-    <a href="https://wa.me/51937556459" target="_blank" class="whatsapp-btn">
+    <a href=" https://wa.me/51937556459 " target="_blank" class="whatsapp-btn">
       💬 Contactar por WhatsApp
     </a>
   </div>
@@ -394,7 +394,7 @@
     <p>👇INGRESA EL CÓDIGO DE ACCESO 👇</p>
 
     <div class="glow-frame">
-      <img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif" alt="Corazones flotando" width="180" height="180" />
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif " alt="Corazones flotando" width="180" height="180" />
     </div>
 
     <div id="display" class="key-display"></div>
@@ -417,7 +417,7 @@
     <button class="btn-iniciar" onclick="submitKey()">Iniciar</button>
 
     <div class="glow-frame">
-      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif" alt="Bailarina de amor" width="180" height="180" />
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif " alt="Bailarina de amor" width="180" height="180" />
     </div>
   </div>
 
@@ -431,7 +431,7 @@
 
     <!-- GIF debajo de la carta con borde brillante -->
     <div class="glow-frame" style="margin-top: 1.6rem; max-width: 200px;">
-      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif" alt="Bailarina de amor" />
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif " alt="Bailarina de amor" />
     </div>
 
     <p class="credit">By <strong>AnthZz Berrocal | BerMatMods</strong></p>
@@ -494,7 +494,7 @@
       letterElement.textContent = '';
       letterElement.style.opacity = 1;
 
-      const message = `En cada latido, pienso en ti.
+      const message = `En cada latido, pleno en ti.
 No necesito palabras para decirte que eres mi todo,
 porque mi corazón ya lo grita en silencio.
 
