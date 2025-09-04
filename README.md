@@ -16,7 +16,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f9f6ff, #e9d5ff); /* Fondo suave con tono morado claro */
+      background: #fffaf9;
       color: #555;
       min-height: 100vh;
       display: flex;
@@ -26,26 +26,26 @@
       padding: 20px;
       overflow-x: hidden;
       position: relative;
-      filter: saturate(1.1); /* Ligera saturación */
+      filter: saturate(1.6);
     }
 
-    /* Animación de borde brillante sutil (solo líneas brillantes) */
+    /* Animación de borde brillante súper intensa */
     @keyframes rainbowGlow {
-      0% { box-shadow: 0 0 12px rgba(180, 50, 200, 0.4); }
-      33% { box-shadow: 0 0 12px rgba(230, 80, 190, 0.4); }
-      66% { box-shadow: 0 0 12px rgba(140, 100, 255, 0.4); }
-      100% { box-shadow: 0 0 12px rgba(180, 50, 200, 0.4); }
+      0% { box-shadow: 0 0 18px rgba(255, 0, 255, 0.7), 0 0 25px rgba(255, 100, 255, 0.6); }
+      33% { box-shadow: 0 0 18px rgba(255, 100, 255, 0.7), 0 0 25px rgba(255, 0, 255, 0.6); }
+      66% { box-shadow: 0 0 18px rgba(255, 0, 255, 0.7), 0 0 25px rgba(100, 0, 255, 0.6); }
+      100% { box-shadow: 0 0 18px rgba(255, 0, 255, 0.7), 0 0 25px rgba(255, 100, 255, 0.6); }
     }
 
-    /* Marco brillante solo en el borde */
     .glow-frame {
       position: relative;
       display: inline-block;
       border-radius: 18px;
       margin: 1.4rem 0;
-      animation: rainbowGlow 3s ease-in-out infinite alternate;
+      animation: rainbowGlow 2s ease-in-out infinite alternate;
       padding: 3px;
-      background: linear-gradient(45deg, #ba68c8, #e91e63, #7b1fa2, #ec407a);
+      background: linear-gradient(45deg, #ff00ff, #ff00cc, #ff66ff, #ff33ff);
+      overflow: visible;
     }
 
     .glow-frame img {
@@ -68,7 +68,7 @@
       left: 20px;
       width: 50px;
       height: 50px;
-      background: rgba(123, 31, 162, 0.1);
+      background: rgba(123, 31, 162, 0.15);
       border-radius: 50%;
       display: flex;
       flex-direction: column;
@@ -76,7 +76,7 @@
       align-items: center;
       cursor: pointer;
       z-index: 100;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 10px rgba(142, 36, 170, 0.2);
       transition: all 0.3s;
     }
 
@@ -87,11 +87,12 @@
       background: #9c27b0;
       margin: 3px 0;
       border-radius: 2px;
+      box-shadow: 0 0 8px rgba(156, 39, 176, 0.5);
     }
 
     .menu-btn:hover {
-      background: rgba(123, 31, 162, 0.15);
-      transform: scale(1.05);
+      background: rgba(123, 31, 162, 0.2);
+      transform: scale(1.08);
     }
 
     /* Menú desplegable */
@@ -101,14 +102,14 @@
       left: -300px;
       width: 280px;
       height: 100vh;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+      background: rgba(255, 255, 255, 0.99);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 35px rgba(142, 36, 170, 0.18);
       padding: 60px 20px 20px;
       transition: left 0.4s ease;
       z-index: 99;
       border-radius: 0 20px 20px 0;
-      border-left: 2px solid #9c27b0;
+      border-left: 3px solid #9c27b0;
     }
 
     .menu.open {
@@ -120,12 +121,12 @@
       color: #8e24aa;
       margin-bottom: 1.2rem;
       font-size: 1.4rem;
-      border-bottom: 1px solid #d1c4e9;
+      border-bottom: 1px solid #e1bee7;
       padding-bottom: 0.5rem;
     }
 
     .menu p {
-      color: #666;
+      color: #555;
       font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 1.4rem;
@@ -142,13 +143,13 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 1.05rem;
-      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
       transition: all 0.3s;
     }
 
     .whatsapp-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
     }
 
     .close-menu {
@@ -160,17 +161,18 @@
       cursor: pointer;
     }
 
-    /* Pantalla de bloqueo - diseño muy suave */
+    /* Pantalla de bloqueo */
     .lock-screen {
       text-align: center;
       padding: 2rem;
       max-width: 440px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 24px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      border: 1px solid #eee;
+      box-shadow: 0 6px 25px rgba(142, 36, 170, 0.1);
+      border: 1px solid #ddd;
       position: relative;
       z-index: 1;
+      overflow: visible;
     }
 
     .lock-screen h2 {
@@ -178,35 +180,36 @@
       font-size: 2rem;
       color: #6a1b9a;
       margin: 1.2rem 0;
+      text-shadow: 0 0 8px rgba(255, 0, 255, 0.2);
     }
 
     .lock-screen p {
-      color: #777;
+      color: #666;
       font-size: 1.1rem;
       margin-bottom: 1.4rem;
       font-weight: 400;
     }
 
-    /* Display de clave - fondo muy claro */
+    /* Display de clave */
     .key-display {
       font-family: 'Poppins', monospace;
       font-size: 1.8rem;
       color: #8e24aa;
-      background: #fcfbff;
+      background: #fdfcff;
       padding: 1rem 1.3rem;
       border-radius: 12px;
       margin: 1.3rem auto;
       width: 90%;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #d0d0ff;
       letter-spacing: 5px;
-      box-shadow: 0 2px 8px rgba(142, 36, 170, 0.1);
+      box-shadow: 0 3px 12px rgba(142, 36, 170, 0.15);
     }
 
-    /* Teclado - botones suaves */
+    /* Teclado */
     .keypad {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 14px;
       margin: 1.4rem 0;
     }
 
@@ -214,22 +217,23 @@
       font-size: 1.45rem;
       font-weight: 600;
       padding: 1.1rem 0;
-      background: #f9f7ff;
+      background: #f8f4ff;
       color: #8e24aa;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #d0d0ff;
       border-radius: 12px;
       cursor: pointer;
       transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(142, 36, 170, 0.1);
     }
 
     .key:hover {
-      background: #f3eaff;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(142, 36, 170, 0.15);
+      background: #f0e6ff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(142, 36, 170, 0.2);
     }
 
     .key:active {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
     /* Botón Iniciar */
@@ -238,18 +242,18 @@
       padding: 1rem 2.2rem;
       font-size: 1.3rem;
       font-weight: 600;
-      background: linear-gradient(45deg, #8e24aa, #ba68c8);
+      background: linear-gradient(45deg, #9c27b0, #d060ff);
       color: white;
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 6px 16px rgba(142, 36, 170, 0.3);
+      box-shadow: 0 8px 20px rgba(156, 39, 176, 0.4);
       transition: all 0.3s ease;
     }
 
     .btn-iniciar:hover {
-      transform: scale(1.06);
-      box-shadow: 0 8px 20px rgba(142, 36, 170, 0.4);
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(156, 39, 176, 0.5);
     }
 
     /* Contenido principal */
@@ -261,10 +265,10 @@
     }
 
     .letter-frame {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       border-radius: 24px;
       padding: 2.2rem 1.8rem;
-      box-shadow: 0 6px 24px rgba(142, 36, 170, 0.12);
+      box-shadow: 0 8px 30px rgba(142, 36, 170, 0.18);
       position: relative;
       margin-bottom: 1.8rem;
     }
@@ -275,7 +279,7 @@
       inset: 0;
       border-radius: 24px;
       padding: 3px;
-      background: linear-gradient(45deg, #ba68c8, #8e24aa);
+      background: linear-gradient(45deg, #d060ff, #9c27b0);
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: destination-out;
       mask-composite: subtract;
@@ -285,11 +289,12 @@
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.3rem;
-      background: linear-gradient(45deg, #8e24aa, #ba68c8);
+      background: linear-gradient(45deg, #9c27b0, #d060ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px rgba(156, 39, 176, 0.2);
     }
 
     .letter {
@@ -314,36 +319,36 @@
     /* Corazones flotantes */
     .floating-heart {
       position: fixed;
-      font-size: 18px;
+      font-size: 22px;
       pointer-events: none;
       opacity: 0;
       z-index: 1000;
       user-select: none;
-      animation: floatUp 16s ease-out forwards, fadeHeart 4s ease-in-out infinite;
+      animation: floatUp 14s ease-out forwards, pulseHeart 3s ease-in-out infinite;
     }
 
     @keyframes floatUp {
       0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 0.8; }
-      90% { opacity: 0.8; }
-      100% { transform: translateY(-15vh) rotate(360deg); opacity: 0; }
+      10% { opacity: 0.9; }
+      90% { opacity: 0.9; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
     }
 
-    @keyframes fadeHeart {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
 
     /* Créditos */
     .credit {
       margin-top: 1.6rem;
       font-size: 0.75rem;
-      color: #bbb;
+      color: #aaa;
       font-style: italic;
     }
 
     .credit strong {
-      color: #8e24aa;
+      color: #9c27b0;
       font-weight: 600;
     }
 
@@ -383,7 +388,7 @@
     <div class="close-menu" onclick="toggleMenu()">✕</div>
     <h3>🛠️ Personalización</h3>
     <p>¿Quieres personalizar esta carta, el código de acceso o usar este diseño para tu proyecto?</p>
-    <a href=" https://wa.me/51937556459 " target="_blank" class="whatsapp-btn">
+    <a href="https://wa.me/51930569195" target="_blank" class="whatsapp-btn">
       💬 Contactar por WhatsApp
     </a>
   </div>
@@ -394,7 +399,7 @@
     <p>👇INGRESA EL CÓDIGO DE ACCESO 👇</p>
 
     <div class="glow-frame">
-      <img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif " alt="Corazones flotando" width="180" height="180" />
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif" alt="Corazones flotando" />
     </div>
 
     <div id="display" class="key-display"></div>
@@ -417,7 +422,7 @@
     <button class="btn-iniciar" onclick="submitKey()">Iniciar</button>
 
     <div class="glow-frame">
-      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif " alt="Bailarina de amor" width="180" height="180" />
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif" alt="Bailarina de amor" />
     </div>
   </div>
 
@@ -430,12 +435,58 @@
     </div>
 
     <!-- GIF debajo de la carta con borde brillante -->
-    <div class="glow-frame" style="margin-top: 1.6rem; max-width: 200px;">
-      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif " alt="Bailarina de amor" />
+    <div class="glow-frame" style="margin-top: 1.6rem;">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif" alt="Bailarina de amor" />
     </div>
 
     <p class="credit">By <strong>AnthZz Berrocal | BerMatMods</strong></p>
   </div>
+
+  <!-- Efecto táctil: explosión de corazones y chispas -->
+  <script>
+    function createTouchEffect(x, y) {
+      const colors = ['#ff0080', '#ff33cc', '#ff66ff', '#cc00ff', '#9933ff', '#ff1493', '#ff69b4'];
+      const emojis = ['❤️', '💖', '💕', '💓', '💗', '💞', '💘', '✨', '🌟', '💫'];
+      
+      for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.className = 'floating-heart';
+          heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          heart.style.left = x + (Math.random() - 0.5) * 80 + 'px';
+          heart.style.top = y + (Math.random() - 0.5) * 80 + 'px';
+          heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+          heart.style.fontSize = (Math.random() * 10 + 16) + 'px';
+          document.body.appendChild(heart);
+
+          // Animación más intensa
+          heart.animate([
+            { transform: 'translate(0, 0) scale(0.5)', opacity: 1 },
+            { transform: `translate(${Math.random() * 100 - 50}px, -${Math.random() * 100 + 50}px) scale(1.2)`, opacity: 0.8 },
+            { transform: `translate(${Math.random() * 120 - 60}px, -${Math.random() * 150 + 80}px) scale(0)`, opacity: 0 }
+          ], {
+            duration: 2000 + Math.random() * 1000,
+            easing: 'cubic-bezier(0.2, 0.8, 0.7, 1)'
+          });
+
+          setTimeout(() => heart.remove(), 3000);
+        }, i * 50);
+      }
+    }
+
+    // Detectar clic/touch
+    document.body.addEventListener('click', function(e) {
+      if (e.target !== document.querySelector('.menu-btn') && !document.querySelector('.menu').contains(e.target)) {
+        createTouchEffect(e.clientX, e.clientY);
+      }
+    });
+
+    document.body.addEventListener('touchstart', function(e) {
+      for (let touch of e.touches) {
+        createTouchEffect(touch.clientX, touch.clientY);
+      }
+    });
+  </script>
 
   <script>
     let input = '';
@@ -530,4 +581,3 @@ es para ti.`;
     }
   </script>
 </body>
-</html>
